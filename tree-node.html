@@ -1,0 +1,14 @@
+<template>
+
+  <ul show.bind="current.visible" style="list-style-type: none;">
+    <li>
+      <div>
+        <span if.bind="current.hasChildren()" click.trigger="current.toggleNode()" class="${current.icon}"></span>
+        <span>${current.name}</span>
+      </div>
+
+      <tree-node repeat.for="node of current.children" current.bind="node"></tree-node>
+
+    </li>
+  </ul>
+</template>
