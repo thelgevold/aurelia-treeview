@@ -7,7 +7,7 @@ export class NodeModel{
     this.visible = true;
 
     if(this.hasChildren()){
-      this.icon = 'fa fa-minus';
+      this.icon = 'fa fa-chevron-down';
       this.expanded = true;
     }
   }
@@ -26,10 +26,10 @@ export class NodeModel{
     this.expanded = !this.expanded;
 
     if(this.expanded === true){
-      this.icon = 'fa fa-minus';
+      this.icon = 'fa fa-chevron-down';
     }
     else{
-      this.icon = 'fa fa-plus';
+      this.icon = 'fa fa-chevron-right';
     }
 
   }
